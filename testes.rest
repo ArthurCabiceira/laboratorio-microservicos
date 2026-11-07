@@ -1,3 +1,7 @@
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+###
+
 GET http://localhost:4001/produtos
 
 ###
@@ -10,3 +14,26 @@ Content-Type: application/json
   "preco": 25.99,
   "categoria": "Categoria 2"
 }
+
+###
+
+### Teste 1: Coordenadas Válidas (Exemplo: Lisboa - lat 38.71, lon -9.13)
+GET http://localhost:4001/clima?lat=38.71&lon=-9.13
+
+###
+
+### Teste 2: Coordenadas Inválidas (Latitude acima de 90)
+GET http://localhost:4001/clima?lat=150&lon=-9.13
+
+### Teste 1: Pokémon Existente por ID (Exemplo: 25 - Pikachu)
+GET http://localhost:4001/pokemon/25
+
+###
+
+### Teste 2: Pokémon Existente por Nome (Exemplo: ditto)
+GET http://localhost:4001/pokemon/ditto
+
+###
+
+### Teste 3: Pokémon Inexistente (Deve retornar status 404)
+GET http://localhost:4001/pokemon/999999
