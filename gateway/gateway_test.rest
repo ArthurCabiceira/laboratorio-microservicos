@@ -1,0 +1,7 @@
+### Testar acesso aos produtos via Gateway (Porta 3000)
+GET http://localhost:3000/api/produtos
+
+###
+
+### Testar acesso aos pedidos via Gateway (Porta 3000)
+GET http://localhost:3000/api/pedidos
