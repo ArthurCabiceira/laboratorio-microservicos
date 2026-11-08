@@ -1,0 +1,35 @@
+### 1. Criar o primeiro produto (HTTP 201)
+POST http://localhost:4001/produtos
+Content-Type: application/json
+
+{
+  "nome": "Teclado Mecânico",
+  "preco": 150.00
+}
+
+###
+
+### 2. Criar o segundo produto (HTTP 201)
+POST http://localhost:4001/produtos
+Content-Type: application/json
+
+{
+  "nome": "Rato Wireless",
+  "preco": 75.50
+}
+
+###
+
+### 3. Tentar criar com dados inválidos (HTTP 400)
+POST http://localhost:4001/produtos
+Content-Type: application/json
+
+{
+  "nome": "",
+  "preco": -10
+}
+
+###
+
+### 4. Listar todos os produtos (HTTP 200)
+GET http://localhost:4001/produtos

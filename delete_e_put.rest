@@ -1,0 +1,9 @@
+PUT http://localhost:4001/produtos/1
+Content-Type: application/json
+
+{
+    "nome": "Teclado ",
+    "preco": 34.00
+}
+###
+DELETE http://localhost:4001/produtos/2 HTTP/1.1
